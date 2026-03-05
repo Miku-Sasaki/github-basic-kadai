@@ -1,0 +1,52 @@
+PS C:\Users\miku2> cd C:\Users\miku2\Desktop\Git_Hub
+PS C:\Users\miku2\Desktop\Git_Hub> mkdir git_challenge
+
+
+    ディレクトリ: C:\Users\miku2\Desktop\Git_Hub
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2026/03/05     20:24                git_challenge
+
+
+PS C:\Users\miku2\Desktop\Git_Hub> cd git_challenge
+
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> New-Item hello_world.txt
+
+
+    ディレクトリ: C:\Users\miku2\Desktop\Git_Hub\git_challenge
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2026/03/05     20:33              0 hello_world.txt
+
+
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> Set-Content hello_world.txt "Hello, world!"
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> Get-Content hello_world.txt
+Hello, world!
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git add hello_world.tx
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git add hello_world.txt
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git commit -m "First commit: Create hello_world.txt with greeting"
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git log
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git init
+Initialized empty Git repository in C:/Users/miku2/Desktop/Git_Hub/git_challenge/.git/
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git add hello_world.txt
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git commit -m "First commit: Create hello_world.txt with greeting"
+[main (root-commit) a982363] First commit: Create hello_world.txt with greeting
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> Add-Content hello_world.txt "`nこんにちは、世界！"
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git add hello_world.txt
+warning: in the working copy of 'hello_world.txt', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git commit -m "Second commit: Add Japanese greeting"
+[main a1179db] Second commit: Add Japanese greeting
+ 1 file changed, 2 insertions(+)
+PS C:\Users\miku2\Desktop\Git_Hub\git_challenge> git log --oneline
+a1179db (HEAD -> main) Second commit: Add Japanese greeting
+a982363 First commit: Create hello_world.txt with greeting
